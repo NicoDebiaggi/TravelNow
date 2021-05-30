@@ -72,20 +72,32 @@ if(cardOverlay != null ){
 }
 
 /*==================== ScrollReveal ====================*/
-var slideUp = {
+var slideLeft = {
   distance: '150%',
   duration: "600" ,
   delay: "200",
   origin: 'right',
-  opacity: "0.2"
+  opacity: "0"
+};
+var slideRight = {
+  distance: '150%',
+  duration: "600" ,
+  delay: "200",
+  origin: 'left',
+  opacity: "0"
 };
 var slideDown = {
   duration: "800",
   opacity: "0",
   origin: 'bottom'
 }
-ScrollReveal().reveal('.textSectionTwo', slideUp);
+ScrollReveal().reveal('.columOne', slideRight);
+ScrollReveal().reveal('.columTwo', slideLeft);
+ScrollReveal().reveal('.textSectionTwo', slideLeft);
 ScrollReveal().reveal('.firstSection', slideDown);
+ScrollReveal().reveal('.aboutSubtitle', slideLeft);
+ScrollReveal().reveal('.people', slideDown);
+ScrollReveal().reveal('.aboutSection', slideRight);
 
 
 /*==================== Mobile menu toggle ====================*/

@@ -67,9 +67,9 @@ body{
     position: fixed;
     align-items: initial;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     top: 20px;
-    padding: 0 10% 0 15%;
+    padding: 0 10vw 0 15vw;
 }
 .gradientNav{
     position: fixed;
@@ -476,6 +476,8 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     height: fit-content;
+    width: 100vw;
+    overflow: hidden;
 }
 .gradient{
     height: 101%;
@@ -664,7 +666,7 @@ body{
     justify-content: center;
     height: 20%;
     width: 100%;
-    color: #fff;
+    color: var(--firstColor);
     position: relative;
     top: 15vh;
 }
@@ -792,10 +794,12 @@ body{
 }
 .aboutSubtitle{
     flex: 1 1 250px;
+    max-width: 70vw;
+    color: var(--firstColor);
     font-family: 'Poppins', sans-serif;
     font-size: var(--biggerFontSize);
     line-height: 70px;
-    margin: 10vh 5% 5% 5%;
+    margin: 15vh 5% 10vh 5%;
 }
 .aboutDescription{
     flex: 1 1 250px;
@@ -877,7 +881,7 @@ body{
         position: fixed;
         margin-left: 0%;
         top: -100%;
-        width: 100%;
+        width: 100vw;
         transition: top .4s;
     }
     .navMenu ul{
@@ -898,15 +902,15 @@ body{
         top: 9vh;
     }
     .navBar{
-        padding-left: 0%;
+        padding-left: 0vw;
     }
     .logo{
         font-size: var(--bigFontSize);
-        padding-left: 5%;
+        padding-left: 5vw;
     }
     .navToggle i{
         visibility: visible;
-        right: 5%;
+        right: 5vw;
         position: absolute;
     }
     .footNav{
