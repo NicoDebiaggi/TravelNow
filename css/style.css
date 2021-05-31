@@ -130,6 +130,7 @@ body{
 .logo{
     color: var(--accentColor);
     font-size: var(--bigFontSize);
+    z-index: 10;
 }
 .subMenu{
     display: flex;
@@ -374,7 +375,10 @@ body{
 /*=========== destinos ===========*/
 
 .destinos{
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 25vh;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }  
 .destinosBg{
@@ -382,13 +386,13 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     object-fit: cover;
     object-position: center;
 }
 .destinosContainer{
     position: relative;
-    height: 100%;
+    min-height: 100%;
     margin-left: 10vw;
     margin-right: 10vw;
     display: grid;
@@ -519,7 +523,7 @@ body{
 }
 .controls{
     position: absolute;
-    bottom: 32px;
+    bottom: 5vh;
     left: 50%;
     width: fit-content;
     transform: translateX(-50%);
@@ -675,7 +679,7 @@ body{
     flex: 0 0 100%;
     font-family: 'Poppins', sans-serif;
     font-size: var(--biggerFontSize);
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
     color: var(--accentColor);
 }
 .topDescription{
@@ -696,12 +700,23 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     width: 50%;
-    top: 15vh;
+    top: 12vh;
     padding-left: 15vw;
     line-height: 30px;
 }
+.contactoLeft div i{
+    font-size: var(--bigFontSize);
+    transform: translate(-150%, 110%);
+    padding: 2%;
+    background: linear-gradient(130deg,
+              rgba(209, 209, 209, 0.3),
+              rgba(167, 167, 167, 0.2));
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+}
 .address{
     height: 15vh;
+    margin-bottom: 5vh;
     color: var(--accentColor);
 }
 .address p{
@@ -727,15 +742,16 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     height: fit-content;
-    width: 50vw;
+    width: 35vw;
+    max-width: 650px;
     min-width: 300px;
     background: linear-gradient(130deg,
-              rgba(251,251,254,.4),
-              rgba(251,251,254,.2));
+              rgba(251,251,254,.5),
+              rgba(251,251,254,.3));
     backdrop-filter: blur(5px);
     border-radius: 16px;
     padding-bottom: 5vw;
-    margin: 10vh 5vw 10vh 5vw;
+    margin: 15vh 5vw 10vh 5vw;
 }
 .rightTitle{
     color: var(--accentColor);
@@ -744,22 +760,45 @@ body{
     width: 100%;
 }
 .rightData{
-    width: 100%;
-}
-.rightData > input, textarea{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
     width: 80%;
+    margin: auto;
+}
+.inputBox > input, textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: var(--mediumFontSize);
+    margin: 20px 0;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--firstColor);
+    outline: none;
+}
+.inputBox > span{
+    position: absolute;
+    left: 10%;
+    padding: 5px 0;
+    margin: 20px 0;
+    font-size: var(--mediumFontSize);
+    pointer-events: none;
+    transition: 500ms;
+    color: #444;
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span{
+    color: var(--accentColor);
+    font-size: var(--smallFontSize);
+    transform: translateY(-20px);
 }
 .rightButton{
-   display: block;
-   height: 20%;
-   width: 50%;
-   margin: 5% auto 0 auto;
-   align-items: center;
-   justify-content: center;
+   margin: 5% 0 5% 0;
+}
+.enviar{
+    width: 100px;
+    background-color: transparent;
+    border: none;
 }
 
 
@@ -880,26 +919,30 @@ body{
     .navMenu{
         position: fixed;
         margin-left: 0%;
-        top: -100%;
+        top: 0;
+        right: -100%;
         width: 100vw;
-        transition: top .4s;
+        height: 100%;
+        transition: right .4s;
     }
     .navMenu ul{
         flex-direction: column;
         align-items: center;
         background: linear-gradient(130deg,
-        rgba(161, 161, 161, 0.5),
-        rgba(184, 184, 184, 0.3));
+        rgba(134, 134, 134, 0.5),
+        rgba(56, 56, 56, 0.4));
         backdrop-filter: blur(5px);    
-        margin: 0 10vw 0 10vw;
-        padding: 30px;
-        border-radius: 15px;
+        margin: 0 0 0 30vw;
+        padding: 15vh 0 15vh 0;
     }
     .navMenu ul li{
         padding: 15px;
     }
+    .navMenu a{
+        font-size: var(--bigFontSize);
+    }
     .showMenu{
-        top: 9vh;
+        right: 0;
     }
     .navBar{
         padding-left: 0vw;
@@ -931,7 +974,7 @@ body{
     }
     .contactoLeft{
         flex-direction: row;
-        padding-left: 0%;
+        padding-left: 5%;
         width: 100%;
         align-items: center;
         justify-content: space-around;
@@ -943,6 +986,14 @@ body{
     }
     .topDescription{
         flex: 0 0 90%;
+    }
+    .contactoLeft div i{
+        font-size: var(--bigFontSize);
+        transform: translate(-250%, 130%);
+        padding: 4%;
+    }
+    .contactoLeft .address i{
+        transform: translate(-250%, 200%);
     }
 }
 @media (max-width: 768px){
@@ -1091,6 +1142,9 @@ body{
     .contactFooter{
         text-align: center;
     }
+    .destinos{
+        padding-top: 10vh;
+    }
     .destinosData{
         max-width: unset;
         min-width: unset;
@@ -1109,10 +1163,10 @@ body{
         flex-direction: column;
     }
     .phone{
-        height: 10vh;
+        height: 15vh;
     }
     .address{
-        height: 20vh;
+        height: 15vh;
     }
     .contactoRight{
         min-width: 80vw;
