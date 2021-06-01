@@ -71,6 +71,21 @@ if(cardOverlay != null ){
   })
 }
 
+
+var hideMenu = document.getElementById("hideMenu").addEventListener("mouseover", mouseOver);;
+var hideMenu = document.getElementById("hideMenu").addEventListener("mouseout", mouseOut);;
+var subMenu = document.getElementById("subMenu").addEventListener("mouseover", mouseOver);;
+var subMenu = document.getElementById("subMenu").addEventListener("mouseout", mouseOut);;
+
+function mouseOver() {
+  document.getElementById("gradientNav").style.height = "300px";
+}
+
+function mouseOut() {
+  document.getElementById("gradientNav").style.height = "100px";
+}
+
+
 /*==================== ScrollReveal ====================*/
 var slideLeft = {
   distance: '150%',

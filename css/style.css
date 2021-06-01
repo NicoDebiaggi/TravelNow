@@ -79,6 +79,7 @@ body{
     width: 100vw;
     z-index: 10;
     background: linear-gradient(180deg, rgba(21,21,21,0.5) 0%, rgba(21,21,21,0) 90%);
+    transition: height 200ms;
 }
 .navBar a{
     font-weight: 600;
@@ -212,6 +213,9 @@ body{
 .addressFooter{
     margin-bottom: 40px;
     color: var(--thirdColor)
+}
+.foot .footUrls li{
+    padding-bottom: 40px;
 }
 .foot ul li{
     padding-bottom: 30px;
@@ -355,7 +359,7 @@ body{
 }
 .textSectionTwo{
     position: relative;
-    bottom: 65%;
+    bottom: 70%;
     right: -45%;
     margin-right: 5%;
     max-width: 45%;
@@ -376,6 +380,7 @@ body{
 
 .destinos{
     min-height: 100vh;
+    height: fit-content;
     padding-top: 25vh;
     align-items: center;
     justify-content: center;
@@ -834,6 +839,7 @@ body{
 .aboutSubtitle{
     flex: 1 1 250px;
     max-width: 70vw;
+    max-width: 900px;
     color: var(--firstColor);
     font-family: 'Poppins', sans-serif;
     font-size: var(--biggerFontSize);
