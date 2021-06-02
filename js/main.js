@@ -71,7 +71,7 @@ if(cardOverlay != null ){
   })
 }
 
-
+/*==================== hover navGradient ====================*/
 var hideMenu = document.getElementById("hideMenu").addEventListener("mouseover", mouseOver);;
 var hideMenu = document.getElementById("hideMenu").addEventListener("mouseout", mouseOut);;
 var subMenu = document.getElementById("subMenu").addEventListener("mouseover", mouseOver);;
