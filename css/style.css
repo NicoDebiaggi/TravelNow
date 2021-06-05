@@ -377,7 +377,118 @@ body{
 
 
 /*=========== destinos ===========*/
-
+.subDestinos{
+    overflow: hidden;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--thirdColor);
+}
+.subDestinos__seccion{
+    position: relative;
+    display: flex;
+    padding: 5vw;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: var(--thirdColor);
+}
+.subDestinos__seccion__capsula{
+    margin: 5vh;
+    width: 100%;
+    max-width: 1200px;
+    height: 40vh;
+    min-height: 350px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.subDestinos__seccion__capsula__data{
+    width: 45%;
+    max-width: 35vw;
+}
+.subDestinos__seccion__capsula__data p{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--mediumFontSize);
+    line-height: 30px;
+}
+.letterSpacing{
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+.subDestinos__seccion__capsula__data p em{
+    font-style: normal;
+    font-weight: 800;
+    color: var(--accentColor);
+}
+.subDestinos__seccion__capsula__data h3{
+    margin: 10% 0;
+    font-size: var(--bigFontSize);
+    font-weight: 600;
+}
+.subDestinos__seccion__capsula img{
+    height: 80%;
+    max-width: 50%;
+    object-fit: cover;
+}
+.subDestinos__img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.subDestinos__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.destinosDiv{
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(130deg,
+        rgba(71, 71, 71, 0.4),
+        rgba(10, 10, 10, 0.2));
+        backdrop-filter: blur(1px);
+}
+.destinosDiv p{
+    background-color: transparent;
+    font-size: var(--biggerFontSize);
+    font-weight: 300;
+    color: var(--firstColor);
+    text-shadow: 2px 2px 10px rgb(39, 39, 39);
+    letter-spacing: 5px;
+    text-align: center;
+}
+@media (max-width:1024px){
+    .subDestinos__seccion__capsula{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .subDestinos__seccion__capsula__data{
+        width: 100%;
+        margin-bottom: 10%;
+        max-width: 70vw;
+    }
+    .subDestinos__seccion__capsula img{
+        width: 70vw;
+        max-width: unset;
+        margin-bottom: 10%;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+}
 .destinos{
     min-height: 100vh;
     height: fit-content;
@@ -433,90 +544,6 @@ body{
     font-weight: 400;
     color: var(--accentColor);
 }
-.photos{
-    grid-column-start: 0;
-    grid-column-end: span 2;
-    overflow: hidden;
-    height: 50vh;
-    position: relative;
-}
-.photos img{
-    max-height: 100%;
-    width: 100%;
-    position: relative;
-    object-fit: cover;
-    object-position: 80% 50%;
-}
-.columOne{
-    margin: 10%;
-    margin-left: 15%;
-    overflow: hidden;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.columOne img{
-    height: 30vw;
-    width: 30vw;
-    object-fit: cover;
-    margin-bottom: 50px;
-}
-.columTwo{
-    margin: 10%;
-    margin-left: 15%;
-    overflow: hidden;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.columTwo img{
-    height: 30vw;
-    width: 30vw;
-    object-fit: cover; 
-    margin-bottom: 50px;
-}
-.subDestinos{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    height: fit-content;
-    width: 100vw;
-    overflow: hidden;
-}
-.gradient{
-    height: 101%;
-    width: 100%;
-    top: -101%;
-    position: relative;
-    background: linear-gradient(130deg,
-              rgba(66, 65, 65, 0.4),
-              rgba(87, 87, 87, 0.2));
-    backdrop-filter: blur(15px);
-}
-.gradient p{
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: var(--biggestFontSize);
-    color: var(--firstColor);
-    text-shadow: 2px 2px 10px rgba(150, 150, 150, 1);
-}
-.destinosRule{
-    width: 65%;
-    height: 1px;
-    margin: 5vh 0 5vh 0;
-    background-color: var(--accentColor);
-    position: relative;
-    grid-column-start: 0;
-    grid-column-end: span 2;
-    grid-row-start: 2;
-}
 /*=========== galleryControls ===========*/
 
 .controlsImg{
@@ -559,6 +586,7 @@ body{
     min-height: 100vh;
     width: 100%;
     position: relative;
+    z-index: 10;
 }
 .ofertasBg{
     height: 100%;

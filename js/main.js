@@ -89,14 +89,14 @@ function mouseOut() {
 /*==================== ScrollReveal ====================*/
 var slideLeft = {
   distance: '150%',
-  duration: "600" ,
+  duration: "800" ,
   delay: "200",
   origin: 'right',
   opacity: "0"
 };
 var slideRight = {
   distance: '150%',
-  duration: "600" ,
+  duration: "800" ,
   delay: "200",
   origin: 'left',
   opacity: "0"
@@ -106,8 +106,7 @@ var slideDown = {
   opacity: "0",
   origin: 'bottom'
 }
-ScrollReveal().reveal('.columOne', slideRight);
-ScrollReveal().reveal('.columTwo', slideLeft);
+ScrollReveal().reveal('.subDestinos__seccion__capsula', slideLeft);
 ScrollReveal().reveal('.textSectionTwo', slideLeft);
 ScrollReveal().reveal('.firstSection', slideDown);
 ScrollReveal().reveal('.aboutSubtitle', slideLeft);
