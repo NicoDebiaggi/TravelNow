@@ -1,0 +1,1226 @@
+/*============== mainVariables ==============*/
+
+* { font-family: 'Open Sans', sans-serif; text-decoration: none; list-style: none;}/*(185, 255, 152)*/
+
+$firstColor: #fff;
+$secondColor: #000;
+$accentColor: rgb(255, 110, 110);
+$navColor: rgb(236, 236, 236);
+$thirdColor: rgb(230, 221, 215);
+
+$smallFontSize: 16px;
+$mediumFontSize: 20px;
+$bigFontSize: 32px;
+$biggerFontSize: 48px;
+$biggestFontSize: 64px;
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $thirdColor;
+}
+.button{
+    font-size: $mediumFontSize;
+    font-weight: 400;
+    position: relative;
+    top: 20px;
+    padding: 20px;
+    border: 3px solid $firstColor;
+    background-color: transparent;
+    background-position: 100% 0;
+    transition: background-color 300ms;
+    transition: padding 300ms;
+    border-radius: 15px;
+
+    a{
+        color: $firstColor;
+        text-shadow:0px 3px 6px rgba(136, 136, 136, 0.87); 
+        transition: color 300ms;
+        transition: text-shadow 300ms;
+    }
+}
+.button:hover{
+    background-color: $firstColor;
+    padding-right: 30px;
+    padding-left: 10px;
+
+    i{
+        opacity: 1;
+    }
+
+    a{
+        color: $secondColor;
+        text-shadow: none;
+    }
+}
+.bxs-chevron-right{
+    color: $secondColor;
+    font-size: $bigFontSize;
+    position: absolute;
+    top: 15px; 
+    opacity: 0;
+    transition: opacity 300ms;
+}
+/*============== nav ==============*/
+
+.navBar{
+    display: flex;
+    position: fixed;
+    align-items: initial;
+    z-index: 100;
+    width: 100vw;
+    top: 20px;
+    padding: 0 10vw 0 15vw;
+
+    a{
+        font-weight: 600;
+        transition: 200ms;
+    }
+    
+    a:hover{
+        color:$accentColor;
+    }
+}
+.gradientNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100vw;
+    z-index: 15;
+    background: linear-gradient(180deg, rgba(21,21,21,0.5) 0%, rgba(21,21,21,0) 90%);
+    transition: height 200ms;
+}
+.navMenu{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    margin-left: 40%;
+
+    a{
+        color:$navColor;
+        font-size: $mediumFontSize;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.navToggle i{
+    color: $accentColor;
+    cursor: pointer;
+    font-size: $bigFontSize;
+    visibility: hidden;
+    z-index: 20;
+}
+.navGoUp i{
+    color: $accentColor;
+    text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
+    cursor: pointer;
+    font-size: $biggerFontSize;
+    position: absolute;
+    top: 90vh;
+    right: 5vw;
+    opacity: 0;
+    transition: opacity 200ms;
+    transition: color 200ms;
+    animation-name: efectoFlecha;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+.goUpShow i{
+    opacity: 1;
+}
+.logo{
+    color: $accentColor;
+    font-size: $bigFontSize;
+    z-index: 20;
+}
+.subMenu{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.subMenu1{
+    padding: 30px 0 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms;
+    position: absolute;
+}
+.subMenu2{
+    padding: 15px 0 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms;
+    position: absolute;
+}
+.subMenu3{
+    padding: 15px 0 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 800ms;
+    position: absolute;
+}
+.hideMenu:hover + ul a li{
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+.subMenu:hover > a li{
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/*============== footer ==============*/
+
+.foot{
+    position: relative;
+    top: 0;
+    height: 40%;
+    width: 100%;
+    opacity: 1;
+    background-color: $secondColor;
+}
+.footNav{
+    justify-content: space-between;
+    margin: 0 20% 0 20%;
+    padding: 5vh 0 5vh 0;
+    display: flex;
+}
+.travelnowFooter{
+    color: $accentColor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $bigFontSize;
+}
+.infoFooter{
+    color: $firstColor;
+    line-height: 35px;
+}
+.addressFooter{
+    margin-bottom: 40px;
+    color: $thirdColor
+}
+.foot .footUrls li{
+    padding-bottom: 40px;
+}
+.foot ul li{
+    padding-bottom: 30px;
+}
+.foot a{  
+    font-size: $mediumFontSize;
+    font-weight: 400;
+    color: $firstColor;
+}
+.foot a:hover{
+    color: $accentColor;
+    transition: 300ms;
+}
+.socialMedias li a{
+    font-size: $bigFontSize;
+}
+.footerRule{
+    width: 65%;
+    height: 1px;
+    background-color: $accentColor;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+}
+
+/*============== index ==============*/
+/*============== mainSecction ==============*/
+
+.mainPage{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.bgindex{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.bgindex img{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gradientMain{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(130deg,
+    rgba(66, 65, 65, 0.2),
+    rgba(87, 87, 87, 0.1));
+    backdrop-filter: blur(5px);    
+}
+.firstSection {
+    text-align: left;
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    padding: 30vh 15vw 0 15vw;
+}
+.headerOne{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: $biggestFontSize;
+    font-weight: 400;
+    color: $firstColor;
+    text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
+}
+.textOne{
+    top: -25px;
+    position: relative;
+    font-size: $mediumFontSize;
+    font-weight: 400;
+    color: $accentColor;
+    text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
+}
+.mainButton{
+    position: absolute;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    top: 90%;
+    right: 5%;
+    height: $biggestFontSize;
+    width: $biggestFontSize;
+    animation-name: efectoFlecha;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+.bx-chevron-down-circle{
+    color: $accentColor;
+    font-size: $biggestFontSize;
+    position: relative;
+    animation-name: efectoFlecha;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+@keyframes efectoFlecha{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-2vh); }
+    100%{ transform: translateY(0); }
+}
+/*============== sectionTwo ==============*/
+
+.sectionTwo{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.rightFloat{
+    position: absolute;
+    left: 40%;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    background-color: $thirdColor;
+}
+.sectionTwoRule{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 1px;
+    background-color: $accentColor;
+}
+.leftFloat{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+}
+.leftFloat img{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.textSectionTwo{
+    position: relative;
+    bottom: 70%;
+    right: -45%;
+    margin-right: 5%;
+    max-width: 45%;
+}
+.textSectionTwo p{
+    font-size: $biggestFontSize;
+    font-weight:300;
+    line-height: 80px;
+}
+.travelnowWord{
+    color: $accentColor;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/*=========== destinos ===========*/
+.subDestinos{
+    overflow: hidden;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: $thirdColor;
+}
+.subDestinos__seccion{
+    position: relative;
+    display: flex;
+    padding: 5vw;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: $thirdColor;
+}
+.subDestinos__seccion__capsula{
+    margin: 5vh;
+    width: 100%;
+    max-width: 1200px;
+    height: 40vh;
+    min-height: 350px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.subDestinos__seccion__capsula__data{
+    width: 45%;
+    max-width: 35vw;
+}
+.subDestinos__seccion__capsula__data p{
+    font-family: 'Poppins', sans-serif;
+    font-size: $mediumFontSize;
+    line-height: 30px;
+}
+.letterSpacing{
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+.subDestinos__seccion__capsula__data p em{
+    font-style: normal;
+    font-weight: 800;
+    color: $accentColor;
+}
+.subDestinos__seccion__capsula__data h3{
+    margin: 10% 0;
+    font-size: $bigFontSize;
+    font-weight: 600;
+}
+.subDestinos__seccion__capsula img{
+    height: 80%;
+    max-width: 50%;
+    object-fit: cover;
+}
+.subDestinos__img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.subDestinos__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.destinosDiv{
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(130deg,
+        rgba(71, 71, 71, 0.4),
+        rgba(10, 10, 10, 0.2));
+        backdrop-filter: blur(1px);
+}
+.destinosDiv p{
+    background-color: transparent;
+    font-size: $biggerFontSize;
+    font-weight: 300;
+    color: $firstColor;
+    text-shadow: 2px 2px 10px rgb(39, 39, 39);
+    letter-spacing: 5px;
+    text-align: center;
+}
+@media (max-width:1024px){
+    .subDestinos__seccion__capsula{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .subDestinos__seccion__capsula__data{
+        width: 100%;
+        margin-bottom: 10%;
+        max-width: 70vw;
+    }
+    .subDestinos__seccion__capsula img{
+        width: 70vw;
+        max-width: unset;
+        margin-bottom: 10%;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+}
+.destinos{
+    min-height: 100vh;
+    height: fit-content;
+    padding-top: 25vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}  
+.destinosBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+.destinosContainer{
+    position: relative;
+    min-height: 100%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: grid;
+    grid-template-columns: auto;
+    align-content: center;
+}
+.destinosData{
+    background: linear-gradient(130deg,
+        rgba(161, 161, 161, 0.6),
+        rgba(184, 184, 184, 0.4));
+        backdrop-filter: blur(5px); 
+    padding: 60px;
+    border-radius: 15px;
+    max-width: 25vw;
+    min-width: 500px;
+}
+.destinosSubtitle, .destinosTitle, .destinosDescription{
+    color: $firstColor;
+}
+.destinosSubtitle{
+    font-size: $bigFontSize;
+    font-weight: 600;
+}
+.destinosTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: $biggestFontSize;
+    font-weight: 400;
+    line-height: 2.5;
+}
+.destinosDescription{
+    font-size: $mediumFontSize;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    color: $accentColor;
+}
+/*=========== galleryControls ===========*/
+
+.controlsImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 4px;
+}
+.controls{
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    width: fit-content;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    padding: 4px;
+    background-color: $thirdColor;
+    z-index: 50;
+}
+.controlsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+/*=========== activeControls ===========*/
+
+.swiper-slide-thumb-active{
+    width: 60px;
+    height: 60px;
+}
+
+
+/*=========== ofertas ===========*/
+
+.ofertas{
+    height: fit-content;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.ofertasBg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.ofertasBlur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(130deg,
+              rgba(66, 65, 65, 0.4),
+              rgba(87, 87, 87, 0.2));
+    backdrop-filter: blur(15px);
+}
+.cardContainer{
+    padding-top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    height: 40vw;
+    width: 30vw;
+    overflow: hidden;
+    border-radius: 32px;
+    margin: 1vw;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.cardOverlay{
+    position: relative;
+    top: -10%;
+    height: 10%;
+    width: 100%;
+    background: linear-gradient(130deg,
+              rgba(54, 54, 54, 0.4),
+              rgba(26, 26, 26, 0.2));
+    opacity: 0.9;
+    backdrop-filter: blur(5px);
+    transition: 0.7s;
+}
+.cardData{
+    padding: 2% 0 0 50%;
+    transition: 0.7s;
+}
+.cardTitle{
+    display: inline-block;
+    transform: translateX(-50%);
+    font-size: $bigFontSize;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.7s;
+}
+.cardTitle a{
+    color: $firstColor;
+}
+.cardDescription{
+    opacity: 0;
+    transition: 500ms;
+    color: $firstColor;
+    font-size: $mediumFontSize;
+    font-weight: 400;
+    line-height: 45px;
+    z-index: 10;
+}
+.cardPrice{
+    opacity: 0;
+    transition: 500ms;
+}
+.card:hover > .cardOverlay{
+    height: 101%;
+    top: -101%;
+    opacity: 1;
+}
+.card:hover > div > div{
+    padding: 10% 5% 0 5%; 
+}
+.card:hover > div > div > .cardTitle{
+    font-size: $biggerFontSize;
+    transform: translateX(0);
+    padding-bottom: 5%;
+}
+.card:hover > div > div > .cardDescription{
+    opacity: 1;
+}
+.card:hover > div > div > .cardPrice{
+    opacity: 1;
+}
+
+
+/*=========== contacto ===========*/
+.contacto{
+    height: fit-content;
+    width: 100%;
+    position: relative; 
+}
+.contactoBlur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(130deg,
+              rgba(66, 65, 65, 0.4),
+              rgba(87, 87, 87, 0.2));
+    backdrop-filter: blur(15px);
+}
+.contactoTop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    color: $firstColor;
+    position: relative;
+    top: 15vh;
+}
+.topTitle{
+    text-align: center;
+    flex: 0 0 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: $biggerFontSize;
+    margin-bottom: 1vw;
+    color: $accentColor;
+}
+.topDescription{
+    text-align: center;
+    flex: 0 0 60%;
+    padding-bottom: 5%;
+    line-height: 32px;
+    font-size: $smallFontSize;
+}
+.contactoBottom{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.contactoLeft{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 50%;
+    top: 12vh;
+    padding-left: 15vw;
+    line-height: 30px;
+}
+.contactoLeft div i{
+    font-size: $bigFontSize;
+    transform: translate(-150%, 110%);
+    padding: 2%;
+    background: linear-gradient(130deg,
+              rgba(209, 209, 209, 0.3),
+              rgba(167, 167, 167, 0.2));
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+}
+.address{
+    height: 15vh;
+    margin-bottom: 5vh;
+    color: $accentColor;
+}
+.address p{
+    color: $firstColor;
+}
+.phone{
+    height: 15vh;
+    color: $accentColor;
+}
+.phone p{
+    color: $firstColor;
+}
+.email{
+    height: 15vh;
+    color: $accentColor;
+}
+.email p{
+    color: $firstColor;
+}
+.contactoRight{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 35vw;
+    max-width: 650px;
+    min-width: 300px;
+    background: linear-gradient(130deg,
+              rgba(251,251,254,.5),
+              rgba(251,251,254,.3));
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding-bottom: 5vw;
+    margin: 15vh 5vw 10vh 5vw;
+}
+.rightTitle{
+    color: $accentColor;
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+.rightData{
+    width: 80%;
+    margin: auto;
+}
+.inputBox > input, textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: $mediumFontSize;
+    margin: 20px 0;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $firstColor;
+    outline: none;
+}
+.inputBox > span{
+    position: absolute;
+    left: 10%;
+    padding: 5px 0;
+    margin: 20px 0;
+    font-size: $mediumFontSize;
+    pointer-events: none;
+    transition: 500ms;
+    color: #444;
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span{
+    color: $accentColor;
+    font-size: $smallFontSize;
+    transform: translateY(-20px);
+}
+.rightButton{
+   margin: 5% 0 5% 0;
+}
+.enviar{
+    width: 100px;
+    background-color: transparent;
+    border: none;
+}
+
+
+/*=========== about ===========*/
+
+.about{
+    height: fit-content;
+    width: 100%;
+    position: relative; 
+}
+.aboutBg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.aboutBlur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(130deg,
+              rgba(66, 65, 65, 0.4),
+              rgba(87, 87, 87, 0.2));
+    backdrop-filter: blur(15px);
+}
+.aboutContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+.aboutSubtitle{
+    flex: 1 1 250px;
+    max-width: 70vw;
+    max-width: 900px;
+    color: $firstColor;
+    font-family: 'Poppins', sans-serif;
+    font-size: $biggerFontSize;
+    line-height: 70px;
+    margin: 15vh 5% 10vh 5%;
+}
+.aboutDescription{
+    flex: 1 1 250px;
+    margin-top: 10%;
+    margin: 10vh 5% 5% 5%;
+    font-size: medium;
+    line-height: 35px;
+}
+.aboutSection{
+    text-align: center;
+    flex: 1 100%;
+    height: fit-content;
+    margin: 0 5% 5% 5%;
+    padding: 2%;
+    border-radius: 16px;
+    background: linear-gradient(130deg,
+              rgba(251,251,254,.5),
+              rgba(251,251,254,.5));
+    backdrop-filter: blur(10px);
+}
+.aboutSection > h2{
+    font-size: $biggerFontSize;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+.aboutPeople{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+.people{
+    height: 25vw;
+    width: 25vw;
+    margin: 80px;
+    margin-top: 100px;
+    position: relative;
+}
+.people > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    top: 50px;
+}
+.people > p{
+    font-size: $mediumFontSize;
+    margin-top: 5%;
+}
+.people > p > em{
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-size: $bigFontSize;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+@media (max-width: 1400px){
+    .navMenu{
+        margin-left: 20%;
+    }
+    .cardContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        height: 80vw;
+        width: 70vw;
+        overflow: hidden;
+        border-radius: 32px;
+        margin: 2vw;
+    }
+}
+@media (max-width: 1024px){
+    li > .subMenu{
+        display: none;      
+    }
+    .navMenu{
+        position: fixed;
+        margin-left: 0%;
+        top: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100%;
+        transition: right .4s;
+    }
+    .navMenu ul{
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(130deg,
+        rgba(134, 134, 134, 0.5),
+        rgba(56, 56, 56, 0.4));
+        backdrop-filter: blur(5px);    
+        margin: 0 0 0 30vw;
+        padding: 15vh 0 15vh 0;
+    }
+    .navMenu ul li{
+        padding: 15px;
+    }
+    .navMenu a{
+        font-size: $bigFontSize;
+    }
+    .showMenu{
+        right: 0;
+    }
+    .navBar{
+        padding-left: 0vw;
+    }
+    .logo{
+        font-size: $bigFontSize;
+        padding-left: 5vw;
+    }
+    .navToggle i{
+        visibility: visible;
+        right: 5vw;
+        position: absolute;
+    }
+    .footNav{
+        margin: 0 10% 0 10%;
+    }
+    .aboutPeople{
+        flex-direction: column;
+        align-items: center;
+    }
+    .people{
+        height: 40vw;
+        width: 40vw;
+        margin: 10vw;
+    }
+    .contactoBottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contactoLeft{
+        flex-direction: row;
+        padding-left: 5%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 5vw;
+        text-align: center;
+    }
+    .contactoRight{
+        width: 80%;
+    }
+    .topDescription{
+        flex: 0 0 90%;
+    }
+    .contactoLeft div i{
+        font-size: $bigFontSize;
+        transform: translate(-250%, 130%);
+        padding: 4%;
+    }
+    .contactoLeft .address i{
+        transform: translate(-250%, 200%);
+    }
+}
+@media (max-width: 768px){
+    :root{
+        --smallFontSize: 14px;
+        --mediumFontSize: 18px;
+        --bigFontSize: 30px;
+        --biggerFontSize: 40px;
+        --biggestFontSize: 50px;
+    }
+    .textSectionTwo p{
+        line-height: 65px;
+    }
+    .footNav{
+        margin: 0 5% 0 5%;
+    }
+}
+@media (max-width: 600px){
+    .rightFloat{
+        width: 100%;
+        height: 50%;
+        left: 0;
+        position: relative;
+    }
+    .textSectionTwo{
+        right: -5%;
+        bottom: 40%;
+        max-width: 100%;
+    }
+    .textSectionTwo p{
+        font-size: $biggerFontSize;
+    }
+    .leftFloat{
+        z-index: 20;
+        height: 50%;
+        width: 100%;
+    }
+    .leftFloat img{
+        object-fit: cover;
+    }
+    .footNav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 4fr 2fr;
+    }
+    .travelnowFooter{
+        grid-column-start: 0;
+        justify-self: center;
+    }
+    .infoFooter{
+        grid-row-start: 2;
+        align-self: center;
+        justify-self: center;
+    }
+    .footUrls{
+        grid-row-start: 2;
+        align-self: center;
+        justify-self: center;
+    }
+    .socialMedias{
+        grid-column-end: span 2;
+        display: flex;
+        justify-content: space-around;
+        align-self: flex-end;
+    }
+    .footerRule{
+        bottom: 5%;
+    }
+    .destinosData{
+        min-width: 400px;
+    }
+    .subDestinos{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    .photos{
+        grid-column-end: 1;
+    }
+    .columOne{
+        grid-row-start: 3;
+    }
+    .columOne img{
+        height: 60vw;
+        width: 60vw;
+    }
+    .columTwo img{
+        height: 60vw;
+        width: 60vw;
+    }
+    .columTwo{
+        grid-row-start: 4;
+    }
+    .cardOverlay{
+        top: -15%;
+        height: 15%;
+    }
+    .cardDescription{
+        line-height: 30px;
+    }
+    .cardPrice{
+        margin-top: 5vw;
+        font-size: $biggerFontSize;
+    }
+    .aboutDescription{
+        margin: 0 5% 10vh 5%;
+    }
+    .destinosRule{
+        grid-column-end: 1;
+        grid-row-start: 2;
+    }
+}
+@media (max-width: 480px){
+    .textSectionTwo p{
+        font-size: $bigFontSize;
+    }
+    .footNav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 5fr 1fr;
+    }
+    .travelnowFooter{
+        grid-column-start: 0;
+        justify-self: center;
+    }
+    .infoFooter{
+        grid-row-start: 2;
+        align-self: center;
+        justify-self: center;
+    }
+    .footUrls{
+        grid-row-start: 3;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+    .socialMedias{
+        grid-row-start: 4;
+        display: flex;
+        justify-content: space-around;
+        align-self: flex-end;
+    }
+    .addressFooter{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .contactFooter{
+        text-align: center;
+    }
+    .destinos{
+        padding-top: 10vh;
+    }
+    .destinosData{
+        max-width: unset;
+        min-width: unset;
+        padding: 40px;
+    }
+    .cardPrice{
+        display: none;
+    }
+    .card{
+        height: 90vw;
+    }
+    .people{
+        margin: 15vw;
+    }
+    .contactoLeft{
+        flex-direction: column;
+    }
+    .phone{
+        height: 15vh;
+    }
+    .address{
+        height: 15vh;
+    }
+    .contactoRight{
+        min-width: 80vw;
+        padding-bottom: 10vw;
+    }
+    .contactoRight textarea{
+        height: 20vh;
+    }
+}
+@media (max-width: 370px) {
+    .cardPrice{
+        display: inline-block;
+        font-size: $mediumFontSize;
+        margin-top: 30%;
+    }
+    .cardDescription{
+        display: none;
+    }
+}
+@media (max-width: 320px){
+    :root{
+        --smallFontSize: 14px;
+        --mediumFontSize: 18px;
+        --bigFontSize: 24px;
+        --biggerFontSize: 30px;
+        --biggestFontSize: 40px;
+    }
+    .textSectionTwo p{
+        line-height: 50px;
+    }
+}
