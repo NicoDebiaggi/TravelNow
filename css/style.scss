@@ -8,11 +8,14 @@ $accentColor: rgb(255, 110, 110);
 $navColor: rgb(236, 236, 236);
 $thirdColor: rgb(230, 221, 215);
 
-$smallFontSize: 16px;
-$mediumFontSize: 20px;
-$bigFontSize: 32px;
-$biggerFontSize: 48px;
-$biggestFontSize: 64px;
+:root{
+    --smallFontSize: 16px;
+    --mediumFontSize: 20px;
+    --bigFontSize: 32px;
+    --biggerFontSize: 48px;
+    --biggestFontSize: 64px;
+}
+
 
 html{
     scroll-behavior: smooth;
@@ -21,7 +24,7 @@ body{
     background-color: $thirdColor;
 }
 .button{
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     font-weight: 400;
     position: relative;
     top: 20px;
@@ -56,7 +59,7 @@ body{
 }
 .bxs-chevron-right{
     color: $secondColor;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     position: absolute;
     top: 15px; 
     opacity: 0;
@@ -100,7 +103,7 @@ body{
 
     a{
         color:$navColor;
-        font-size: $mediumFontSize;
+        font-size: var(--mediumFontSize);
     }
     ul{
         display: flex;
@@ -111,7 +114,7 @@ body{
 .navToggle i{
     color: $accentColor;
     cursor: pointer;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     visibility: hidden;
     z-index: 20;
 }
@@ -119,7 +122,7 @@ body{
     color: $accentColor;
     text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
     cursor: pointer;
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     position: absolute;
     top: 90vh;
     right: 5vw;
@@ -136,7 +139,7 @@ body{
 }
 .logo{
     color: $accentColor;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     z-index: 20;
 }
 .subMenu{
@@ -196,7 +199,7 @@ body{
     color: $accentColor;
     font-style: normal;
     font-weight: 600;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
 }
 .infoFooter{
     color: $firstColor;
@@ -213,7 +216,7 @@ body{
     padding-bottom: 30px;
 }
 .foot a{  
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     font-weight: 400;
     color: $firstColor;
 }
@@ -222,7 +225,7 @@ body{
     transition: 300ms;
 }
 .socialMedias li a{
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
 }
 .footerRule{
     width: 65%;
@@ -273,7 +276,7 @@ body{
 .headerOne{
     position: relative;
     font-family: 'Poppins', sans-serif;
-    font-size: $biggestFontSize;
+    font-size: var(--biggestFontSize);
     font-weight: 400;
     color: $firstColor;
     text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
@@ -281,7 +284,7 @@ body{
 .textOne{
     top: -25px;
     position: relative;
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     font-weight: 400;
     color: $accentColor;
     text-shadow:0px 3px 6px rgba(53, 53, 53, 0.705);
@@ -292,8 +295,8 @@ body{
     transform: translateY(-50%);
     top: 90%;
     right: 5%;
-    height: $biggestFontSize;
-    width: $biggestFontSize;
+    height: var(--biggestFontSize);
+    width: var(--biggestFontSize);
     animation-name: efectoFlecha;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -302,7 +305,7 @@ body{
 }
 .bx-chevron-down-circle{
     color: $accentColor;
-    font-size: $biggestFontSize;
+    font-size: var(--biggestFontSize);
     position: relative;
     animation-name: efectoFlecha;
     animation-iteration-count: infinite;
@@ -357,7 +360,7 @@ body{
     max-width: 45%;
 }
 .textSectionTwo p{
-    font-size: $biggestFontSize;
+    font-size: var(--biggestFontSize);
     font-weight:300;
     line-height: 80px;
 }
@@ -406,7 +409,7 @@ body{
 }
 .subDestinos__seccion__capsula__data p{
     font-family: 'Poppins', sans-serif;
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     line-height: 30px;
 }
 .letterSpacing{
@@ -420,7 +423,7 @@ body{
 }
 .subDestinos__seccion__capsula__data h3{
     margin: 10% 0;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     font-weight: 600;
 }
 .subDestinos__seccion__capsula img{
@@ -455,7 +458,7 @@ body{
 }
 .destinosDiv p{
     background-color: transparent;
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     font-weight: 300;
     color: $firstColor;
     text-shadow: 2px 2px 10px rgb(39, 39, 39);
@@ -521,17 +524,17 @@ body{
     color: $firstColor;
 }
 .destinosSubtitle{
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     font-weight: 600;
 }
 .destinosTitle{
     font-family: 'Poppins', sans-serif;
-    font-size: $biggestFontSize;
+    font-size: var(--biggestFontSize);
     font-weight: 400;
     line-height: 2.5;
 }
 .destinosDescription{
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     margin-bottom: 2vh;
     font-weight: 400;
     color: $accentColor;
@@ -633,7 +636,7 @@ body{
 .cardTitle{
     display: inline-block;
     transform: translateX(-50%);
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     font-family: 'Poppins', sans-serif;
     transition: 0.7s;
 }
@@ -644,7 +647,7 @@ body{
     opacity: 0;
     transition: 500ms;
     color: $firstColor;
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     font-weight: 400;
     line-height: 45px;
     z-index: 10;
@@ -662,7 +665,7 @@ body{
     padding: 10% 5% 0 5%; 
 }
 .card:hover > div > div > .cardTitle{
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     transform: translateX(0);
     padding-bottom: 5%;
 }
@@ -703,7 +706,7 @@ body{
     text-align: center;
     flex: 0 0 100%;
     font-family: 'Poppins', sans-serif;
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     margin-bottom: 1vw;
     color: $accentColor;
 }
@@ -712,7 +715,7 @@ body{
     flex: 0 0 60%;
     padding-bottom: 5%;
     line-height: 32px;
-    font-size: $smallFontSize;
+    font-size: var(--smallFontSize);
 }
 .contactoBottom{
     display: flex;
@@ -730,7 +733,7 @@ body{
     line-height: 30px;
 }
 .contactoLeft div i{
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     transform: translate(-150%, 110%);
     padding: 2%;
     background: linear-gradient(130deg,
@@ -791,7 +794,7 @@ body{
 .inputBox > input, textarea{
     width: 100%;
     padding: 5px 0;
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     margin: 20px 0;
     resize: none;
     background-color: transparent;
@@ -804,7 +807,7 @@ body{
     left: 10%;
     padding: 5px 0;
     margin: 20px 0;
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     pointer-events: none;
     transition: 500ms;
     color: #444;
@@ -814,7 +817,7 @@ body{
 .inputBox textarea:focus ~ span,
 .inputBox textarea:valid ~ span{
     color: $accentColor;
-    font-size: $smallFontSize;
+    font-size: var(--smallFontSize);
     transform: translateY(-20px);
 }
 .rightButton{
@@ -862,7 +865,7 @@ body{
     max-width: 900px;
     color: $firstColor;
     font-family: 'Poppins', sans-serif;
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     line-height: 70px;
     margin: 15vh 5% 10vh 5%;
 }
@@ -886,7 +889,7 @@ body{
     backdrop-filter: blur(10px);
 }
 .aboutSection > h2{
-    font-size: $biggerFontSize;
+    font-size: var(--biggerFontSize);
     font-weight: 200;
     letter-spacing: 5px;
 }
@@ -911,13 +914,13 @@ body{
     top: 50px;
 }
 .people > p{
-    font-size: $mediumFontSize;
+    font-size: var(--mediumFontSize);
     margin-top: 5%;
 }
 .people > p > em{
     font-style: normal;
     font-family: 'Poppins', sans-serif;
-    font-size: $bigFontSize;
+    font-size: var(--bigFontSize);
     font-weight: 500;
     line-height: 45px;
 }
@@ -965,7 +968,7 @@ body{
         padding: 15px;
     }
     .navMenu a{
-        font-size: $bigFontSize;
+        font-size: var(--bigFontSize);
     }
     .showMenu{
         right: 0;
@@ -974,7 +977,7 @@ body{
         padding-left: 0vw;
     }
     .logo{
-        font-size: $bigFontSize;
+        font-size: var(--bigFontSize);
         padding-left: 5vw;
     }
     .navToggle i{
@@ -1014,7 +1017,7 @@ body{
         flex: 0 0 90%;
     }
     .contactoLeft div i{
-        font-size: $bigFontSize;
+        font-size: var(--bigFontSize);
         transform: translate(-250%, 130%);
         padding: 4%;
     }
@@ -1050,7 +1053,7 @@ body{
         max-width: 100%;
     }
     .textSectionTwo p{
-        font-size: $biggerFontSize;
+        font-size: var(--biggerFontSize);
     }
     .leftFloat{
         z-index: 20;
@@ -1121,7 +1124,7 @@ body{
     }
     .cardPrice{
         margin-top: 5vw;
-        font-size: $biggerFontSize;
+        font-size: var(--biggerFontSize);
     }
     .aboutDescription{
         margin: 0 5% 10vh 5%;
@@ -1133,7 +1136,7 @@ body{
 }
 @media (max-width: 480px){
     .textSectionTwo p{
-        font-size: $bigFontSize;
+        font-size: var(--bigFontSize);
     }
     .footNav{
         display: grid;
@@ -1205,7 +1208,7 @@ body{
 @media (max-width: 370px) {
     .cardPrice{
         display: inline-block;
-        font-size: $mediumFontSize;
+        font-size: var(--mediumFontSize);
         margin-top: 30%;
     }
     .cardDescription{
