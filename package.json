@@ -1,0 +1,24 @@
+{
+  "name": "travelnow",
+  "version": "1.0.0",
+  "description": "Una pagina de viajes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoDebiaggi/TravelNow.git"
+  },
+  "keywords": [
+    "viaje",
+    "experiencia",
+    "agencia"
+  ],
+  "author": "Nicolas Debiaggi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoDebiaggi/TravelNow/issues"
+  },
+  "homepage": "https://github.com/NicoDebiaggi/TravelNow#readme"
+}

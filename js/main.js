@@ -58,6 +58,35 @@ window.addEventListener("scroll", () => {
         navElements[i].classList.remove("alt");
       }
     }
+
+/*==================== static background destinos ====================*/
+    var subDestinos__imgCero = document.getElementById("subDestinos__imgCero");
+    var subDestinos__imgUno = document.getElementById("subDestinos__imgUno");
+    var subDestinos__imgDos = document.getElementById("subDestinos__imgDos");
+    var markCero = document.getElementById("markCero");
+    var markUno = document.getElementById("markUno");
+    
+    subDestinos__imgCero.style.visibility = "visible";
+
+    if(subDestinos__imgCero != null){
+      if(markCero.getBoundingClientRect().top <= 0){
+        subDestinos__imgCero.style.visibility = "hidden";
+        subDestinos__imgUno.style.visibility = "visible";
+      }
+      else{
+        subDestinos__imgCero.style.visibility = "visible";
+        subDestinos__imgUno.style.visibility = "hidden";
+      }
+    }
+    if(subDestinos__imgCero != null){
+      if(markUno.getBoundingClientRect().top <= 0){
+        subDestinos__imgUno.style.visibility = "hidden";
+        subDestinos__imgDos.style.visibility = "visible";
+      }
+      else{
+        subDestinos__imgDos.style.visibility= "hidden";
+      }
+    }
 })
 
 /*==================== onClick offersCard ====================*/
