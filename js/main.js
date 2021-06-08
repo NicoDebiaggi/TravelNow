@@ -13,7 +13,7 @@ let galleryTop = new Swiper('.gallery-top', {
     }
 });
 
-let swiper = new Swiper(".swiperPopUp", {
+let swiperPopUp = new Swiper(".swiperPopUp", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -120,18 +120,21 @@ if(capsula__imgCero != null ){
     element.addEventListener("click", ()=>{
       popupSubDestinosCero.classList.add("popupReveal")
       document.body.style.overflow= "hidden";
+      swiperPopUp[0].slideTo(index, 0, false);
     })
   });
   Array.from(capsula__imgUno).forEach(function(element, index){
     element.addEventListener("click", ()=>{
       popupSubDestinosUno.classList.add("popupReveal")
       document.body.style.overflow= "hidden";
+      swiperPopUp[1].slideTo(index, 0, false);
     })
   });
   Array.from(capsula__imgDos).forEach(function(element, index){
     element.addEventListener("click", ()=>{
       popupSubDestinosDos.classList.add("popupReveal")
       document.body.style.overflow= "hidden";
+      swiperPopUp[2].slideTo(index, 0, false);
     })
   });
 
