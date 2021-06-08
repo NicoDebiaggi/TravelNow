@@ -1416,7 +1416,7 @@ body {
     margin-bottom: 10%;
     max-width: 70vw;
   }
-  .subDestinos__seccion__capsula img {
+  .subDestinos__seccion__capsula__imgContainer {
     width: 70vw;
     max-width: unset;
     margin-bottom: 10%;
