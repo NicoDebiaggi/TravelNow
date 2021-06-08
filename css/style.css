@@ -571,9 +571,137 @@ body {
   font-weight: 600;
 }
 
-.subDestinos__seccion__capsula img {
+.subDestinos__seccion__capsula__imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80%;
   max-width: 50%;
+  overflow: hidden;
+}
+
+.subDestinos__seccion__capsula__imgContainer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-filter 500ms, -webkit-transform 500ms ease-in-out;
+  transition: -webkit-filter 500ms, -webkit-transform 500ms ease-in-out;
+  transition: filter 500ms, transform 500ms ease-in-out;
+  transition: filter 500ms, transform 500ms ease-in-out, -webkit-filter 500ms, -webkit-transform 500ms ease-in-out;
+  -webkit-filter: grayscale(0) hue-rotate(0deg) saturate(1) blur(0px) brightness(1);
+          filter: grayscale(0) hue-rotate(0deg) saturate(1) blur(0px) brightness(1);
+}
+
+.subDestinos__seccion__capsula__imgContainer:hover img {
+  -webkit-filter: grayscale(0.6) hue-rotate(10deg) saturate(1.5) blur(2px) brightness(0.6);
+          filter: grayscale(0.6) hue-rotate(10deg) saturate(1.5) blur(2px) brightness(0.6);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.subDestinos__seccion__capsula__imgContainer::before {
+  content: "Descubrir";
+  z-index: 30;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  -webkit-transition: opacity 500ms, -webkit-transform 500ms;
+  transition: opacity 500ms, -webkit-transform 500ms;
+  transition: opacity 500ms, transform 500ms;
+  transition: opacity 500ms, transform 500ms, -webkit-transform 500ms;
+  font-size: var(--bigFontSize);
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 3px 3px 4px #646464;
+}
+
+.subDestinos__seccion__capsula__imgContainer:hover::before {
+  content: "Descubrir";
+  z-index: 30;
+  position: absolute;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.popupSubDestinos {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: 50;
+  top: 100%;
+  opacity: 0;
+  left: 0;
+  -webkit-transition: top 0.5s, opacity 0.6s;
+  transition: top 0.5s, opacity 0.6s;
+}
+
+.popupReveal {
+  top: 0;
+  opacity: 1;
+}
+
+.popupClose {
+  position: absolute;
+  top: 16%;
+  right: 2%;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.popupClose i {
+  font-size: var(--biggerFontSize);
+  color: #fff;
+  text-shadow: 3px 3px 5px black;
+}
+
+.popupBackground {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(130deg, rgba(48, 48, 48, 0.6), rgba(29, 29, 29, 0.4));
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.swiperPopUp {
+  width: 90vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.swiperPopUp .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiperPopUp .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

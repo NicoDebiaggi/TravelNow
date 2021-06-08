@@ -1,8 +1,8 @@
-/*==================== SWIPER JS ====================*/
+/*==================== Swiper JS ====================*/
 let galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 0,
     slidesPerView: 0,
-})
+});
 
 let galleryTop = new Swiper('.gallery-top', {
     effect: 'fade',
@@ -11,7 +11,14 @@ let galleryTop = new Swiper('.gallery-top', {
     thumbs: {
       swiper: galleryThumbs
     }
-})
+});
+
+let swiper = new Swiper(".swiperPopUp", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 /*==================== Parallax & Scrolling FX ====================*/
 const translate = document.querySelectorAll(".translate")
@@ -66,9 +73,9 @@ window.addEventListener("scroll", () => {
     var markCero = document.getElementById("markCero");
     var markUno = document.getElementById("markUno");
     
-    subDestinos__imgCero.style.visibility = "visible";
 
     if(subDestinos__imgCero != null){
+      subDestinos__imgCero.style.visibility = "visible";
       if(markCero.getBoundingClientRect().top <= 0){
         subDestinos__imgCero.style.visibility = "hidden";
         subDestinos__imgUno.style.visibility = "visible";
@@ -89,7 +96,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
-/*==================== onClick offersCard ====================*/
+/*==================== onClick FX ====================*/
 var cardOverlay = document.getElementsByClassName("cardOverlay");
 if(cardOverlay != null ){
   Array.from(cardOverlay).forEach(function(element, index){
@@ -97,6 +104,20 @@ if(cardOverlay != null ){
     element.addEventListener("click", ()=>{
       window.scrollTo(0, document.getElementById("destino__" + index).offsetTop);
     })
+  })
+}
+
+var capsulaImg = document.getElementsByClassName("subDestinos__seccion__capsula__imgContainer");
+var popupSubDestinosUno = document.getElementById("popupSubDestinosUno");
+var popupClose = document.getElementById("popupClose");
+if(capsulaImg != null ){
+  Array.from(capsulaImg).forEach(function(element, index){
+    element.addEventListener("click", ()=>{
+      popupSubDestinosUno.classList.add("popupReveal")
+    })
+  })
+  popupClose.addEventListener("click", ()=>{
+    popupSubDestinosUno.classList.remove("popupReveal")
   })
 }
 
