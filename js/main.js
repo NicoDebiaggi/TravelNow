@@ -107,18 +107,44 @@ if(cardOverlay != null ){
   })
 }
 
-var capsulaImg = document.getElementsByClassName("subDestinos__seccion__capsula__imgContainer");
+var capsula__imgCero = document.getElementsByClassName("capsula__imgCero");
+var capsula__imgUno = document.getElementsByClassName("capsula__imgUno");
+var capsula__imgDos = document.getElementsByClassName("capsula__imgDos");
+var popupSubDestinosCero = document.getElementById("popupSubDestinosCero");
 var popupSubDestinosUno = document.getElementById("popupSubDestinosUno");
-var popupClose = document.getElementById("popupClose");
-if(capsulaImg != null ){
-  Array.from(capsulaImg).forEach(function(element, index){
+var popupSubDestinosDos = document.getElementById("popupSubDestinosDos");
+var popupClose = document.getElementsByClassName("popupClose");
+
+if(capsula__imgCero != null ){
+  Array.from(capsula__imgCero).forEach(function(element, index){
+    element.addEventListener("click", ()=>{
+      popupSubDestinosCero.classList.add("popupReveal")
+      document.body.style.overflow= "hidden";
+    })
+  });
+  Array.from(capsula__imgUno).forEach(function(element, index){
     element.addEventListener("click", ()=>{
       popupSubDestinosUno.classList.add("popupReveal")
+      document.body.style.overflow= "hidden";
     })
-  })
-  popupClose.addEventListener("click", ()=>{
-    popupSubDestinosUno.classList.remove("popupReveal")
-  })
+  });
+  Array.from(capsula__imgDos).forEach(function(element, index){
+    element.addEventListener("click", ()=>{
+      popupSubDestinosDos.classList.add("popupReveal")
+      document.body.style.overflow= "hidden";
+    })
+  });
+
+  if(popupClose != null){
+    Array.from(popupClose).forEach(function(element, index){
+      element.addEventListener("click", ()=>{
+      popupSubDestinosCero.classList.remove("popupReveal")
+      popupSubDestinosUno.classList.remove("popupReveal")
+      popupSubDestinosDos.classList.remove("popupReveal")
+      document.body.style.overflow = "auto";
+      })
+    });
+  }
 }
 
 /*==================== hover navGradient ====================*/

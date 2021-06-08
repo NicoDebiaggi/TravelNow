@@ -653,7 +653,7 @@ body {
 
 .popupClose {
   position: absolute;
-  top: 16%;
+  top: 15%;
   right: 2%;
   z-index: 50;
   cursor: pointer;
