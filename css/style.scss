@@ -124,11 +124,10 @@ body{
     cursor: pointer;
     font-size: var(--biggerFontSize);
     position: absolute;
-    top: 90vh;
+    top: 110vh;
     right: 5vw;
     opacity: 0;
-    transition: opacity 200ms;
-    transition: color 200ms;
+    transition: opacity 300ms, top 200ms;
     animation-name: efectoFlecha;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -136,6 +135,7 @@ body{
 }
 .goUpShow i{
     opacity: 1;
+    top: 90vh;
 }
 .logo{
     color: $accentColor;
@@ -236,6 +236,57 @@ body{
     right: 0;
 }
 
+/*============== intro ==============*/
+.intro {
+    background: $secondColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.introSlider {
+    background: $thirdColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    z-index: 200;
+}
+.introElements {
+    color: $firstColor;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--biggerFontSize);
+    margin: 0 5vw;
+}
+.introHide {
+    background: $secondColor;
+    overflow: hidden;
+}
+.introText {
+    transform: translateY(100%);
+    display: inline-block;
+    line-height: 80px;
+}
+.outro{
+    background: $secondColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
 /*============== index ==============*/
 /*============== mainSecction ==============*/
 
@@ -292,7 +343,7 @@ body{
 .mainButton{
     position: absolute;
     transform: translateX(-50%);
-    transform: translateY(-50%);
+    transform: translateY(0);
     top: 90%;
     right: 5%;
     height: var(--biggestFontSize);
@@ -301,7 +352,7 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 .bx-chevron-down-circle{
     color: $accentColor;

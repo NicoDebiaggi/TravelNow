@@ -205,3 +205,53 @@ const showMenu = (toggleId, navId) =>{
   }
 }
 showMenu("navToggleId", "navMenuId");
+
+/*==================== intro Gsap Animation ====================*/
+const anchorNav = document.getElementById("navMenuId").querySelectorAll("a");
+const anchorFoot = document.getElementById("footUrlsId").querySelectorAll("a");
+const anchors = document.getElementsByClassName("anchorId");
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".introText", { y: "0%", duration: 0.5, stagger: 0.25 });
+window.addEventListener("load", () => {
+  tl.to(".introSlider", { y: "-100%", duration: 1.5, delay: 0.5 });
+  tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+})
+
+anchorNav.forEach(anchor => {
+  anchor.addEventListener("click", e => {
+    e.preventDefault();
+    let target = e.target.href;
+
+    tl.to(".outro", {y: "0%", duration: 0.5})
+
+    setTimeout(() => {
+      window.location.href = target;
+    }, 500);
+  })
+});
+anchorFoot.forEach(anchor => {
+  anchor.addEventListener("click", e => {
+    e.preventDefault();
+    let target = e.target.href;
+
+    tl.to(".outro", {y: "0%", duration: 0.5})
+
+    setTimeout(() => {
+      window.location.href = target;
+    }, 500);
+  })
+});
+Array.from(anchors).forEach(anchor => {
+  anchor.addEventListener("click", e => {
+    e.preventDefault();
+    let target = e.target.href;
+
+    tl.to(".outro", {y: "0%", duration: 0.5})
+
+    setTimeout(() => {
+      window.location.href = target;
+    }, 500);
+  })
+});
