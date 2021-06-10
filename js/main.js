@@ -212,23 +212,33 @@ const anchorFoot = document.getElementById("footUrlsId").querySelectorAll("a");
 const anchors = document.getElementsByClassName("anchorId");
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-tl.to(".introText", { y: "0%", duration: 0.5, stagger: 0.25 });
-window.addEventListener("load", () => {
-  tl.to(".introSlider", { y: "-100%", duration: 1.5, delay: 0.5 });
-  tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-})
+var introArr = Array.from(document.getElementsByClassName("introText"));
+if(introArr[0] != null){
+  tl.to(".introText", { y: "0%", duration: 0.5, stagger: 0.25 });
+  window.addEventListener("load", () => {
+    tl.to(".introSlider", { y: "-100%", duration: 1.5, delay: 0.5});
+    tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+  })
+}
+else{
+  window.addEventListener("load", () => {
+    tl.to(".introSlider", { y: "-100%", duration: 0.5, delay: 0.1});
+    tl.to(".intro", { y: "-100%", duration: 0.4 }, "-=0.35");
+  })
+}
 
 anchorNav.forEach(anchor => {
   anchor.addEventListener("click", e => {
     e.preventDefault();
-    let target = e.target.href;
-
-    tl.to(".outro", {y: "0%", duration: 0.5})
+    let target = anchor.href;
 
     setTimeout(() => {
       window.location.href = target;
     }, 500);
+
+    tl.to(".outro", {y: "0%", duration: 0.5})
+    tl.to(".outro", {y: "-100%", duration: 0.3, delay: 0.5})
+    tl.to(".outro", {y: "100%", duration: 0})
   })
 });
 anchorFoot.forEach(anchor => {
