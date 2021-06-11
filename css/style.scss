@@ -1,16 +1,17 @@
 /*============== mainVariables ==============*/
 * { font-family: 'Open Sans', sans-serif; text-decoration: none; list-style: none;}/*(185, 255, 152)*/
-@import "./index.scss";
-@import "./destinos.scss";
-@import "./ofertas.scss";
-@import "./about.scss";
-@import "./contacto.scss";
+@import "./_index.scss";
+@import "./_destinos.scss";
+@import "./_ofertas.scss";
+@import "./_about.scss";
+@import "./_contacto.scss";
 
 $firstColor: #fff;
 $secondColor: #000;
 $accentColor: rgb(255, 110, 110);
 $navColor: rgb(236, 236, 236);
 $thirdColor: rgb(230, 221, 215);
+$transition: 1s;
 
 :root{
     --smallFontSize: 16px;
@@ -20,6 +21,12 @@ $thirdColor: rgb(230, 221, 215);
     --biggestFontSize: 64px;
 }
 
+@mixin baseProperties($width, $height, $display, $position){
+    width: $width;
+    height: $height;
+    display: $display;
+    position: $position;
+}
 
 html{
     scroll-behavior: smooth;
@@ -41,15 +48,15 @@ body{
     border: 3px solid $firstColor;
     background-color: transparent;
     background-position: 100% 0;
-    transition: background-color 300ms;
-    transition: padding 300ms;
+    transition: background-color $transition/3;
+    transition: padding $transition/3;
     border-radius: 15px;
 
     a{
         color: $firstColor;
         text-shadow:0px 3px 6px rgba(136, 136, 136, 0.87); 
-        transition: color 300ms;
-        transition: text-shadow 300ms;
+        transition: color $transition/3;
+        transition: text-shadow $transition/3;
     }
 }
 .button:hover{
@@ -72,22 +79,20 @@ body{
     position: absolute;
     top: 15px; 
     opacity: 0;
-    transition: opacity 300ms;
+    transition: opacity $transition/3;
 }
 /*============== nav ==============*/
 
 .navBar{
-    display: flex;
-    position: fixed;
+    @include baseProperties(100vw, unset, flex, fixed);
     align-items: initial;
     z-index: 100;
-    width: 100vw;
     top: 20px;
     padding: 0 10vw 0 15vw;
 
     a{
         font-weight: 600;
-        transition: 200ms;
+        transition: $transition/5;
     }
     
     a:hover{
@@ -95,18 +100,15 @@ body{
     }
 }
 .gradientNav{
-    position: fixed;
+    @include baseProperties(100vw, 100px, unset, fixed);
     top: 0;
     left: 0;
-    height: 100px;
-    width: 100vw;
     z-index: 15;
     background: linear-gradient(180deg, rgba(21,21,21,0.5) 0%, rgba(21,21,21,0) 90%);
-    transition: height 200ms;
+    transition: height $transition/5;
 }
 .navMenu{
-    display: flex;
-    width: 70%;
+    @include baseProperties(70%, unset, flex, unset);
     justify-content: space-between;
     margin-left: 40%;
 
@@ -115,9 +117,8 @@ body{
         font-size: var(--mediumFontSize);
     }
     ul{
-        display: flex;
+        @include baseProperties(100%, unset, flex, unset);
         justify-content: space-between;
-        width: 100%;
     }
 }
 .navToggle i{
@@ -136,7 +137,7 @@ body{
     top: 110vh;
     right: 5vw;
     opacity: 0;
-    transition: opacity 300ms, top 200ms;
+    transition: opacity $transition/3, top $transition/5;
     animation-name: efectoFlecha;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -152,29 +153,28 @@ body{
     z-index: 20;
 }
 .subMenu{
-    display: flex;
-    position: relative;
+    @include baseProperties(unset, unset, flex, relative);
     flex-direction: column;
 }
 .subMenu1{
     padding: 30px 0 15px 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 200ms;
+    transition: opacity $transition/5;
     position: absolute;
 }
 .subMenu2{
     padding: 15px 0 15px 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 500ms;
+    transition: opacity $transition/2;
     position: absolute;
 }
 .subMenu3{
     padding: 15px 0 15px 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 800ms;
+    transition: opacity ($transition/5)*4;
     position: absolute;
 }
 .hideMenu:hover + ul a li{
@@ -191,13 +191,27 @@ body{
 /*============== footer ==============*/
 
 .foot{
-    position: relative;
+    @include baseProperties(100%, fit-content, block, relative);
     top: 0;
     min-height: 40%;
-    height: fit-content;
-    width: 100%;
     opacity: 1;
     background-color: $secondColor;
+
+    .footUrls li{
+        padding-bottom: 40px;
+    }
+    ul li{
+        padding-bottom: 30px;
+    }
+    a{  
+        font-size: var(--mediumFontSize);
+        font-weight: 400;
+        color: $firstColor;
+    }
+    a:hover{
+        color: $accentColor;
+        transition: $transition/3;
+    }
 }
 .footNav{
     justify-content: space-between;
@@ -219,29 +233,12 @@ body{
     margin-bottom: 40px;
     color: $thirdColor
 }
-.foot .footUrls li{
-    padding-bottom: 40px;
-}
-.foot ul li{
-    padding-bottom: 30px;
-}
-.foot a{  
-    font-size: var(--mediumFontSize);
-    font-weight: 400;
-    color: $firstColor;
-}
-.foot a:hover{
-    color: $accentColor;
-    transition: 300ms;
-}
 .socialMedias li a{
     font-size: var(--bigFontSize);
 }
 .footerRule{
-    width: 65%;
-    height: 1px;
+    @include baseProperties(65%, 1px, block, absolute);
     background-color: $accentColor;
-    position: absolute;
     bottom: 15%;
     right: 0;
 }
@@ -325,7 +322,7 @@ body{
         right: -100%;
         width: 100vw;
         height: 100%;
-        transition: right .4s;
+        transition: right ($transition/5)*2;
     }
     .navMenu ul{
         flex-direction: column;

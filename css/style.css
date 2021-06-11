@@ -1066,20 +1066,20 @@ body {
   border: 3px solid #fff;
   background-color: transparent;
   background-position: 100% 0;
-  -webkit-transition: background-color 300ms;
-  transition: background-color 300ms;
-  -webkit-transition: padding 300ms;
-  transition: padding 300ms;
+  -webkit-transition: background-color 0.33333s;
+  transition: background-color 0.33333s;
+  -webkit-transition: padding 0.33333s;
+  transition: padding 0.33333s;
   border-radius: 15px;
 }
 
 .button a {
   color: #fff;
   text-shadow: 0px 3px 6px rgba(136, 136, 136, 0.87);
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  -webkit-transition: text-shadow 300ms;
-  transition: text-shadow 300ms;
+  -webkit-transition: color 0.33333s;
+  transition: color 0.33333s;
+  -webkit-transition: text-shadow 0.33333s;
+  transition: text-shadow 0.33333s;
 }
 
 .button:hover {
@@ -1103,12 +1103,14 @@ body {
   position: absolute;
   top: 15px;
   opacity: 0;
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms;
+  -webkit-transition: opacity 0.33333s;
+  transition: opacity 0.33333s;
 }
 
 /*============== nav ==============*/
 .navBar {
+  width: 100vw;
+  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,15 +1119,14 @@ body {
       -ms-flex-align: initial;
           align-items: initial;
   z-index: 100;
-  width: 100vw;
   top: 20px;
   padding: 0 10vw 0 15vw;
 }
 
 .navBar a {
   font-weight: 600;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .navBar a:hover {
@@ -1133,23 +1134,26 @@ body {
 }
 
 .gradientNav {
+  width: 100vw;
+  height: 100px;
+  display: unset;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100px;
-  width: 100vw;
   z-index: 15;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 21, 21, 0.5)), color-stop(90%, rgba(21, 21, 21, 0)));
   background: linear-gradient(180deg, rgba(21, 21, 21, 0.5) 0%, rgba(21, 21, 21, 0) 90%);
-  -webkit-transition: height 200ms;
-  transition: height 200ms;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
 }
 
 .navMenu {
+  width: 70%;
+  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  position: unset;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1162,13 +1166,15 @@ body {
 }
 
 .navMenu ul {
+  width: 100%;
+  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: unset;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
 }
 
 .navToggle i {
@@ -1188,8 +1194,8 @@ body {
   top: 110vh;
   right: 5vw;
   opacity: 0;
-  -webkit-transition: opacity 300ms, top 200ms;
-  transition: opacity 300ms, top 200ms;
+  -webkit-transition: opacity 0.33333s, top 0.2s;
+  transition: opacity 0.33333s, top 0.2s;
   -webkit-animation-name: efectoFlecha;
           animation-name: efectoFlecha;
   -webkit-animation-iteration-count: infinite;
@@ -1212,6 +1218,8 @@ body {
 }
 
 .subMenu {
+  width: unset;
+  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1226,8 +1234,8 @@ body {
   padding: 30px 0 15px 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   position: absolute;
 }
 
@@ -1235,8 +1243,8 @@ body {
   padding: 15px 0 15px 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   position: absolute;
 }
 
@@ -1244,8 +1252,8 @@ body {
   padding: 15px 0 15px 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 800ms;
-  transition: opacity 800ms;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
   position: absolute;
 }
 
@@ -1263,15 +1271,36 @@ body {
 
 /*============== footer ==============*/
 .foot {
-  position: relative;
-  top: 0;
-  min-height: 40%;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  min-height: 40%;
   opacity: 1;
   background-color: #000;
+}
+
+.foot .footUrls li {
+  padding-bottom: 40px;
+}
+
+.foot ul li {
+  padding-bottom: 30px;
+}
+
+.foot a {
+  font-size: var(--mediumFontSize);
+  font-weight: 400;
+  color: #fff;
+}
+
+.foot a:hover {
+  color: #ff6e6e;
+  -webkit-transition: 0.33333s;
+  transition: 0.33333s;
 }
 
 .footNav {
@@ -1302,26 +1331,6 @@ body {
   color: #e6ddd7;
 }
 
-.foot .footUrls li {
-  padding-bottom: 40px;
-}
-
-.foot ul li {
-  padding-bottom: 30px;
-}
-
-.foot a {
-  font-size: var(--mediumFontSize);
-  font-weight: 400;
-  color: #fff;
-}
-
-.foot a:hover {
-  color: #ff6e6e;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
 .socialMedias li a {
   font-size: var(--bigFontSize);
 }
@@ -1329,8 +1338,9 @@ body {
 .footerRule {
   width: 65%;
   height: 1px;
-  background-color: #ff6e6e;
+  display: block;
   position: absolute;
+  background-color: #ff6e6e;
   bottom: 15%;
   right: 0;
 }
@@ -1440,8 +1450,8 @@ body {
     right: -100%;
     width: 100vw;
     height: 100%;
-    -webkit-transition: right .4s;
-    transition: right .4s;
+    -webkit-transition: right 0.4s;
+    transition: right 0.4s;
   }
   .navMenu ul {
     -webkit-box-orient: vertical;
