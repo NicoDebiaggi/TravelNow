@@ -6,24 +6,25 @@
 
     <!--============== scrollReveal ==================-->
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <!--============== boxIcons ==================-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!--============== normalizeCss ==================-->
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
 
     <!--============== css ==================-->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!--============== fonts ==================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
     <!--============== SEO ==================-->
-    <meta name="keywords" content="aerolínea argentina, agencia de viaje, viaje, vuelos, viajar, hoteleria, turismo, pasajes, empleados, equipo, sobre nosotros">
-    <meta name="description" content="Conoce a nuestro equipo de trabajo, los profesionales que organizan tu aventura.">
-    <title>TravelNow - Acerca de nosotros</title>
-    <link rel = "icon" href = "./img/plane-alt-solid-24.png">
+    <meta name="keywords" content="aerolínea argentina, agencia de viaje, viaje, vuelos, viajar, hoteleria, turismo, pasajes, contactanos, mensaje">
+    <meta name="description" content="Necesitas los servicios de travelnow? No dudes en contactarnos.">
+    <title>TravelNow - Contacto</title>
+    <link rel = "icon" href = "../img/genericas/plane_solid.png">
 </head>
 <body>
     <!--============== navBar ==================-->
@@ -53,37 +54,60 @@
             <a href="#top"><i class='bx bxs-arrow-to-top'></i></a></i>
         </div>
     </header>
-    
+
     <!--============== intro ==================-->
     <div class="intro"></div>
     <div class="outro"></div>
     <div class="introSlider"></div>
 
-    <!--============== about ==================-->
-    <main class="about" id="top">
-        <img src="./img/pexels-fauxels-3184465.jpg" alt="hombre estrecha mano" class="aboutBg">
-        <div class="aboutBlur"></div>
-        <div class="aboutContainer">
-            <h2 class="aboutSubtitle">Somos un equipo de profesionales que hacen lo que aman.</h2>
-            <div class="aboutSection">
-                <h2>Conoce a nuestro equipo</h2>
-                <div class="aboutPeople">
-                    <div class="people">
-                        <img src="./img/pexels-pixabay-220453.jpg" alt="primer plano empleado">
-                        <p><em>Nombre</em><br>Descripcion</p>
-                    </div>
-                    <div class="people">
-                        <img src="./img/pexels-pixabay-220453.jpg" alt="primer plano empleado">
-                        <p><em>Nombre</em><br>Descripcion</p>
-                    </div>
-                    <div class="people">
-                        <img src="./img/pexels-pixabay-220453.jpg" alt="primer plano empleado">
-                        <p><em>Nombre</em><br>Descripcion</p>
-                    </div>
-                    <div class="people">
-                        <img src="./img/pexels-pixabay-220453.jpg" alt="primer plano empleado">
-                        <p><em>Nombre</em><br>Descripcion</p>
-                    </div>
+    <!--============== Contacto ==================-->
+    <main class="contacto" id="top">
+        <img src="../img/genericas/generic_5.jpg" alt="hombre sentado en muelle" class="bgindex">
+        <div class="contactoBlur"></div>
+        <div class="contactoTop">
+            <h2 class="topTitle">Contactanos</h2>
+            <p class="topDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet numquam, assumenda dolore, aut unde itaque est recusandae eos, repellendus cum animi at quia vero illum quo quibusdam? Placeat labore, maxime rem pariatur quis aliquam eligendi, libero necessitatibus animi reiciendis quod?</p>
+        </div>
+        <div class="contactoBottom">
+            <div class="contactoLeft">
+                <div class="address">
+                    <i class='bx bx-map' ></i>
+                    <h2>Direccion</h2>
+                    <p>Av. Cordoba 241 <br>8324 Cipolletti <br>Argentina</p>
+                </div>
+                <div class="phone">
+                    <i class='bx bx-phone'></i>
+                    <h2>Telefono</h2>
+                    <p>+54 9 299 6835020</p>
+                </div>
+                <div class="email">
+                    <i class='bx bx-mail-send' ></i>
+                    <h2>Email</h2>
+                    <p>info@travelnow.com</p>
+                </div>
+            </div>
+            <div class="contactoRight">
+                <div class="rightTitle">
+                    <h2>Envianos tu mensaje</h2>
+                </div>
+                <div class="rightData">
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" required>
+                            <span>Nombre</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="" id="" required></textarea>
+                            <span>Tu mensaje</span>
+                        </div>
+                        <div class="inputBox">
+                            <button class="button rightButton"><input class="enviar" type="submit" value="Enviar"><i class='bx bxs-chevron-right'></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -101,7 +125,7 @@
                 <li><a href="index.html">Página principal</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Acerca de</a></li>
             </ul>
             <ul class="socialMedias">
                 <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
@@ -121,10 +145,10 @@
     ></script>
     
     <!--========== swiper js ==========-->
-    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
 
     <!--========== main js ==========-->
-    <script src="./js/main.js"></script>
-
+    <script src="../js/main.js"></script>
+    
 </body>
 </html>
