@@ -512,6 +512,10 @@
   min-width: 500px;
 }
 
+.destinosData h1 {
+  line-height: var(--biggestFontSize);
+}
+
 .destinosSubtitle, .destinosTitle, .destinosDescription {
   color: #fff;
 }
@@ -546,7 +550,7 @@
 
 .controls {
   position: absolute;
-  bottom: 5vh;
+  bottom: 2vh;
   left: 50%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
