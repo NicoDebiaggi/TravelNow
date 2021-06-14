@@ -1529,9 +1529,9 @@ body {
             align-items: center;
   }
   .people {
-    height: 40vw;
-    width: 40vw;
-    margin: 10vw;
+    height: 70vw;
+    width: 70vw;
+    margin: 10vh 0;
   }
   .contactoBottom {
     -webkit-box-orient: vertical;
@@ -1549,6 +1549,7 @@ body {
             flex-direction: row;
     padding-left: 5%;
     width: 100%;
+    min-height: 400;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1779,7 +1780,7 @@ body {
     height: 90vw;
   }
   .people {
-    margin: 15vw;
+    margin: 12vh 0;
   }
   .contactoLeft {
     -webkit-box-orient: vertical;

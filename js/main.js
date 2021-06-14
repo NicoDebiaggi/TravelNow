@@ -225,6 +225,10 @@ else{
     tl.to(".introSlider", { y: "-100%", duration: 0.5, delay: 0.1});
     tl.to(".intro", { y: "-100%", duration: 0.4 }, "-=0.35");
   })
+  setTimeout(() => {
+    tl.to(".introSlider", { y: "-100%", duration: 0.5, delay: 0.1});
+    tl.to(".intro", { y: "-100%", duration: 0.4 }, "-=0.35");
+  }, 3000)
 }
 
 anchorNav.forEach(anchor => {
