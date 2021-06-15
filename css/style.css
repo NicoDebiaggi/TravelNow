@@ -512,10 +512,6 @@
   min-width: 500px;
 }
 
-.destinosData h1 {
-  line-height: var(--biggestFontSize);
-}
-
 .destinosSubtitle, .destinosTitle, .destinosDescription {
   color: #fff;
 }
@@ -530,6 +526,7 @@
   font-size: var(--biggestFontSize);
   font-weight: 400;
   line-height: 2.5;
+  margin: 0;
 }
 
 .destinosDescription {
@@ -666,6 +663,7 @@
   font-family: 'Poppins', sans-serif;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  margin: 0;
 }
 
 .cardTitle a {
@@ -847,7 +845,16 @@
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
+  height: fit-content;
   position: relative;
+  overflow: hidden;
+}
+
+.contacto img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contactoBlur {
@@ -920,6 +927,7 @@
   top: 12vh;
   padding-left: 15vw;
   line-height: 30px;
+  min-height: 400px;
 }
 
 .contactoLeft div i {

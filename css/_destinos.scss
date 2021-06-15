@@ -224,10 +224,6 @@ $thirdColor: rgb(230, 221, 215);
     border-radius: 15px;
     max-width: 25vw;
     min-width: 500px;
-
-    h1{
-        line-height: var(--biggestFontSize);
-    }
 }
 .destinosSubtitle, .destinosTitle, .destinosDescription{
     color: $firstColor;
@@ -241,6 +237,7 @@ $thirdColor: rgb(230, 221, 215);
     font-size: var(--biggestFontSize);
     font-weight: 400;
     line-height: 2.5;
+    margin: 0;
 }
 .destinosDescription{
     font-size: var(--mediumFontSize);

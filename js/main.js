@@ -190,7 +190,9 @@ ScrollReveal().reveal('.textSectionTwo', slideLeft);
 ScrollReveal().reveal('.firstSection', slideDown);
 ScrollReveal().reveal('.aboutSubtitle', slideLeft);
 ScrollReveal().reveal('.people', slideDown);
-ScrollReveal().reveal('.aboutSection', slideRight);
+ScrollReveal().reveal('.contactoTop', slideLeft);
+ScrollReveal().reveal('.contactoLeft', slideRight);
+ScrollReveal().reveal('.contactoRight', slideLeft);
 
 
 /*==================== Mobile menu toggle ====================*/
@@ -269,3 +271,6 @@ Array.from(anchors).forEach(anchor => {
     }, 500);
   })
 });
+
+/*==================== cookies ====================*/
+document.cookie = "cookie=_ga; SameSite=None; Secure"

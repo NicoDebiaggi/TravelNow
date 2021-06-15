@@ -8,7 +8,15 @@ $thirdColor: rgb(230, 221, 215);
 .contacto{
     height: fit-content;
     width: 100%;
+    height: fit-content;
     position: relative; 
+    overflow: hidden;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 .contactoBlur{
     height: 100%;
@@ -58,6 +66,7 @@ $thirdColor: rgb(230, 221, 215);
     top: 12vh;
     padding-left: 15vw;
     line-height: 30px;
+    min-height: 400px;
 }
 .contactoLeft div i{
     font-size: var(--bigFontSize);
