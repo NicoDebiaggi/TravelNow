@@ -1,6 +1,7 @@
 /*============== mainVariables ==============*/
 * {
   font-family: 'Open Sans', sans-serif;
+  font-display: swap;
   text-decoration: none;
   list-style: none; }
 
@@ -377,7 +378,8 @@
   height: 50px;
   border-radius: 8px;
   cursor: pointer;
-  margin: 4px; }
+  margin: 4px;
+  object-fit: cover; }
 
 .controls {
   position: absolute;

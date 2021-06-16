@@ -273,4 +273,5 @@ Array.from(anchors).forEach(anchor => {
 });
 
 /*==================== cookies ====================*/
-document.cookie = "cookie=_ga; SameSite=None; Secure"
+document.cookie = "_ga=GA1.2.1267423923.1618513656; SameSite=None; Secure"
+document.cookie = "_gid=GA1.2.252817612.1623850509; SameSite=None; Secure"
