@@ -358,6 +358,25 @@ body{
     .footNav{
         margin: 0 10% 0 10%;
     }
+    .sectionThree{
+        flex-direction: column-reverse;
+
+        .sectionThreeData{
+            width: 100%;
+            min-height: 50vh;
+            height: fit-content;
+            h3{
+                margin-top: 10%;
+            }
+            button{
+                margin-bottom: 10%;
+            }
+        }
+        .sectionThreeImg{
+            width: 100%;
+            height: 50vh;
+        }
+    }
     .subDestinos__seccion__capsula{
         flex-direction: column;
         height: fit-content;
@@ -559,6 +578,13 @@ body{
     }
     .contactFooter{
         text-align: center;
+    }
+    .sectionThree{
+        .sectionThreeData{
+            h3{
+                line-height: 50px;
+            }
+        }
     }
     .destinosData{
         max-width: unset;

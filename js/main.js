@@ -187,6 +187,7 @@ var slideDown = {
 }
 ScrollReveal().reveal('.subDestinos__seccion__capsula', slideLeft);
 ScrollReveal().reveal('.textSectionTwo', slideLeft);
+ScrollReveal().reveal('.sectionThreeData', slideRight);
 ScrollReveal().reveal('.firstSection', slideDown);
 ScrollReveal().reveal('.aboutSubtitle', slideLeft);
 ScrollReveal().reveal('.people', slideDown);

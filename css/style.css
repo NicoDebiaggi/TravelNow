@@ -137,6 +137,51 @@
   font-style: normal;
   font-weight: 400; }
 
+/*============== sectionTwo ==============*/
+.sectionThree {
+  width: 100vw;
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #e6ddd7;
+  display: flex; }
+  .sectionThree .sectionThreeData {
+    width: 40%;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; }
+    .sectionThree .sectionThreeData h3 {
+      font-size: var(--biggerFontSize);
+      font-weight: 300;
+      line-height: 80px;
+      margin: 0 5% 5% 5%; }
+      .sectionThree .sectionThreeData h3 em {
+        font-style: normal;
+        font-weight: 400;
+        color: #ff6e6e; }
+    .sectionThree .sectionThreeData button {
+      border-color: #ff6e6e;
+      margin: 0 5%; }
+      .sectionThree .sectionThreeData button a {
+        color: #000; }
+  .sectionThree .sectionThreeRule {
+    position: absolute;
+    top: 10%;
+    left: -6%;
+    width: 90%;
+    height: 1px;
+    background-color: #ff6e6e; }
+  .sectionThree .sectionThreeImg {
+    width: 61%;
+    height: 70vh; }
+    .sectionThree .sectionThreeImg img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+
 /*=========== destinos ===========*/
 .subDestinos {
   overflow: hidden;
@@ -425,7 +470,7 @@
   backdrop-filter: blur(15px); }
 
 .cardContainer {
-  padding-top: 20vh;
+  padding: 15vh 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
@@ -1061,6 +1106,19 @@ body {
     position: absolute; }
   .footNav {
     margin: 0 10% 0 10%; }
+  .sectionThree {
+    flex-direction: column-reverse; }
+    .sectionThree .sectionThreeData {
+      width: 100%;
+      min-height: 50vh;
+      height: fit-content; }
+      .sectionThree .sectionThreeData h3 {
+        margin-top: 10%; }
+      .sectionThree .sectionThreeData button {
+        margin-bottom: 10%; }
+    .sectionThree .sectionThreeImg {
+      width: 100%;
+      height: 50vh; }
   .subDestinos__seccion__capsula {
     flex-direction: column;
     height: fit-content; }
@@ -1217,6 +1275,8 @@ body {
     text-align: center; }
   .contactFooter {
     text-align: center; }
+  .sectionThree .sectionThreeData h3 {
+    line-height: 50px; }
   .destinosData {
     max-width: unset;
     min-width: unset;

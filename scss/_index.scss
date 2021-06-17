@@ -137,3 +137,61 @@ $thirdColor: rgb(230, 221, 215);
     font-style: normal;
     font-weight: 400;
 }
+
+/*============== sectionTwo ==============*/
+.sectionThree{
+    width: 100vw;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background-color: $thirdColor;
+    display: flex;
+
+    .sectionThreeData{
+        width: 40%;
+        align-items: flex-start;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+
+        h3{
+            font-size: var(--biggerFontSize);
+            font-weight: 300;
+            line-height: 80px;
+            margin: 0 5% 5% 5%;
+
+            em{
+                font-style: normal;
+                font-weight: 400;
+                color: $accentColor;
+            }
+        }
+        button{
+            border-color: $accentColor;
+            margin: 0 5%;
+
+            a{
+                color: $secondColor;
+            }
+        }
+    }
+    .sectionThreeRule{
+        position: absolute;
+        top: 10%;
+        left: -6%;
+        width: 90%;
+        height: 1px;
+        background-color: $accentColor;
+    }
+    .sectionThreeImg{
+        width: 61%;
+        height: 70vh;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
