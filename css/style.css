@@ -59,19 +59,19 @@
   position: absolute;
   transform: translateX(-50%);
   transform: translateY(0);
-  top: 90%;
-  right: 5%;
-  height: var(--biggestFontSize);
-  width: var(--biggestFontSize);
+  top: 90vh;
+  right: 5vw;
+  height: var(--biggerFontSize);
+  width: var(--biggerFontSize);
   animation-name: efectoFlecha;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
   animation-delay: 5s; }
 
-.bx-chevron-down-circle {
+.bxs-arrow-to-bottom {
   color: #ff6e6e;
-  font-size: var(--biggestFontSize);
+  font-size: var(--biggerFontSize);
   position: relative;
   animation-name: efectoFlecha;
   animation-iteration-count: infinite;
@@ -137,7 +137,7 @@
   font-style: normal;
   font-weight: 400; }
 
-/*============== sectionTwo ==============*/
+/*============== sectionThree ==============*/
 .sectionThree {
   width: 100vw;
   min-height: 70vh;
@@ -415,7 +415,8 @@
   font-size: var(--mediumFontSize);
   margin-bottom: 2vh;
   font-weight: 400;
-  color: #ff6e6e; }
+  color: #ff6e6e;
+  text-shadow: 1px 1px 2px #2d2d2d; }
 
 /*=========== galleryControls ===========*/
 .controlsImg {
@@ -768,7 +769,7 @@
   font-size: var(--mediumFontSize);
   pointer-events: none;
   transition: 500ms;
-  color: #444; }
+  color: #666; }
 
 .inputBox input:focus ~ span,
 .inputBox input:valid ~ span,
@@ -864,7 +865,7 @@ body {
   top: 0;
   left: 0;
   z-index: 15;
-  background: linear-gradient(180deg, rgba(21, 21, 21, 0.5) 0%, rgba(21, 21, 21, 0) 90%);
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0.9) 0%, rgba(21, 21, 21, 0.4) 60%, rgba(21, 21, 21, 0) 100%);
   transition: height 0.2s; }
 
 .navMenu {
@@ -953,6 +954,9 @@ body {
   visibility: visible;
   position: relative; }
 
+.navMenu ul li .active {
+  color: #ff6e6e; }
+
 /*============== footer ==============*/
 .foot {
   width: 100%;
@@ -981,7 +985,7 @@ body {
   padding: 5vh 0 5vh 0;
   display: flex; }
 
-.travelnowFooter {
+.travelnowFooter a {
   color: #ff6e6e;
   font-style: normal;
   font-weight: 600;

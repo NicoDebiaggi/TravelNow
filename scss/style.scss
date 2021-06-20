@@ -104,7 +104,7 @@ body{
     top: 0;
     left: 0;
     z-index: 15;
-    background: linear-gradient(180deg, rgba(21,21,21,0.5) 0%, rgba(21,21,21,0) 90%);
+    background: linear-gradient(180deg, rgba(21,21,21,0.9) 0%, rgba(21,21,21,0.4) 60%, rgba(21,21,21,0) 100%);
     transition: height $transition/5;
 }
 .navMenu{
@@ -187,6 +187,9 @@ body{
     visibility: visible;
     position: relative;
 }
+.navMenu ul li .active{
+    color: $accentColor
+}
 
 /*============== footer ==============*/
 
@@ -219,7 +222,7 @@ body{
     padding: 5vh 0 5vh 0;
     display: flex;
 }
-.travelnowFooter{
+.travelnowFooter a{
     color: $accentColor;
     font-style: normal;
     font-weight: 600;
