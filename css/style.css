@@ -787,6 +787,67 @@
   background-color: transparent;
   border: none; }
 
+/*=========== about ===========*/
+.errorMain {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .errorMain img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .errorMain .errorGradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(130deg, rgba(66, 65, 65, 0.3), rgba(87, 87, 87, 0.2));
+    backdrop-filter: blur(5px); }
+  .errorMain h1 {
+    z-index: 10;
+    color: #fff;
+    font-size: 15rem;
+    margin: 0 2vw; }
+  .errorMain .errorMidline {
+    height: 20rem;
+    width: 2px;
+    background-color: #ff6e6e;
+    z-index: 10; }
+  .errorMain .errorText {
+    z-index: 10;
+    width: 25vw;
+    min-width: 320px;
+    margin: 0 2vw; }
+    .errorMain .errorText h2 {
+      color: #ff6e6e;
+      font-size: var(--biggerFontSize);
+      margin-bottom: 2vh; }
+    .errorMain .errorText p {
+      color: #fff;
+      font-size: var(--bigFontSize); }
+    .errorMain .errorText div {
+      z-index: 10; }
+
+@media (max-width: 768px) {
+  .errorMain {
+    flex-direction: column; }
+    .errorMain h1 {
+      font-size: 8rem; }
+    .errorMain .errorMidline {
+      display: none; } }
+
+@media (max-width: 320px) {
+  .errorMain h1 {
+    font-size: 6rem; }
+  .errorMain .errorText {
+    min-width: 250px; } }
+
 :root {
   --smallFontSize: 16px;
   --mediumFontSize: 20px;
