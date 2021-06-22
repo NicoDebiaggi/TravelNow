@@ -809,43 +809,44 @@
     left: 0;
     background: linear-gradient(130deg, rgba(66, 65, 65, 0.3), rgba(87, 87, 87, 0.2));
     backdrop-filter: blur(5px); }
-  .errorMain h1 {
+  .errorMain .errorContainer {
     z-index: 10;
-    color: #fff;
-    font-size: 15rem;
-    margin: 0 2vw; }
-  .errorMain .errorMidline {
-    height: 20rem;
-    width: 2px;
-    background-color: #ff6e6e;
-    z-index: 10; }
-  .errorMain .errorText {
-    z-index: 10;
-    width: 25vw;
-    min-width: 320px;
-    margin: 0 2vw; }
-    .errorMain .errorText h2 {
-      color: #ff6e6e;
-      font-size: var(--biggerFontSize);
-      margin-bottom: 2vh; }
-    .errorMain .errorText p {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .errorMain .errorContainer h1 {
       color: #fff;
-      font-size: var(--bigFontSize); }
-    .errorMain .errorText div {
-      z-index: 10; }
+      font-size: 15rem;
+      margin: 0 2vw; }
+    .errorMain .errorContainer .errorMidline {
+      height: 20rem;
+      width: 2px;
+      background-color: #ff6e6e; }
+    .errorMain .errorContainer .errorText {
+      width: 25vw;
+      min-width: 320px;
+      margin: 0 2vw; }
+      .errorMain .errorContainer .errorText h2 {
+        color: #ff6e6e;
+        font-size: var(--biggerFontSize);
+        margin-bottom: 2vh; }
+      .errorMain .errorContainer .errorText p {
+        color: #fff;
+        font-size: var(--bigFontSize); }
 
 @media (max-width: 768px) {
-  .errorMain {
-    flex-direction: column; }
-    .errorMain h1 {
+  .errorMain .errorContainer {
+    flex-direction: column;
+    align-items: flex-start; }
+    .errorMain .errorContainer h1 {
       font-size: 8rem; }
-    .errorMain .errorMidline {
+    .errorMain .errorContainer .errorMidline {
       display: none; } }
 
 @media (max-width: 320px) {
-  .errorMain h1 {
+  .errorMain .errorContainer h1 {
     font-size: 6rem; }
-  .errorMain .errorText {
+  .errorMain .errorContainer .errorText {
     min-width: 250px; } }
 
 :root {

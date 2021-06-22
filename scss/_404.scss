@@ -11,7 +11,7 @@ $thirdColor: rgb(230, 221, 215);
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     img{
         position: absolute;
         left: 0;
@@ -31,57 +31,63 @@ $thirdColor: rgb(230, 221, 215);
         rgba(87, 87, 87, 0.2));
         backdrop-filter: blur(5px);
     }
-    h1{
+    .errorContainer{
         z-index: 10;
-        color: $firstColor;
-        font-size: 15rem;
-        margin: 0 2vw;
-    }
-    .errorMidline{
-        height: 20rem;
-        width: 2px;
-        background-color: $accentColor;
-        z-index: 10;
-    }
-    .errorText{
-        z-index: 10;
-        width: 25vw;
-        min-width: 320px;
-        margin: 0 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        h2{
-            color: $accentColor;
-            font-size: var(--biggerFontSize);
-            margin-bottom: 2vh;
-        }
-        p{
+        h1{
             color: $firstColor;
-            font-size: var(--bigFontSize);
+            font-size: 15rem;
+            margin: 0 2vw;
         }
-        div{
-            z-index: 10;
+        .errorMidline{
+            height: 20rem;
+            width: 2px;
+            background-color: $accentColor;
+        }
+        .errorText{
+            width: 25vw;
+            min-width: 320px;
+            margin: 0 2vw;
+    
+            h2{
+                color: $accentColor;
+                font-size: var(--biggerFontSize);
+                margin-bottom: 2vh;
+            }
+            p{
+                color: $firstColor;
+                font-size: var(--bigFontSize);
+            }
         }
     }
 }
 @media (max-width: 768px){
     .errorMain{
-        flex-direction: column;
-
-        h1{
-            font-size: 8rem;
-        }
-        .errorMidline{
-            display: none;
+        .errorContainer{
+            flex-direction: column;
+            align-items: flex-start;
+            
+            h1{
+                font-size: 8rem;
+            }
+            .errorMidline{
+                display: none;
+            }
         }
     }
 }
 @media (max-width: 320px){
     .errorMain{
+    .errorContainer{
         h1{
             font-size: 6rem;
         }
         .errorText{
             min-width: 250px;
         }
+    }
     }
 }
